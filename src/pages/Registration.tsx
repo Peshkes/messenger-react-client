@@ -44,7 +44,7 @@ const Registration = () => {
         localStorage.setItem('savedUsername', usernameInput);
         setAxiosAuthHeader(secretCode);
 
-        axios.post('https://localhost:3000/register', { username: usernameInput, secretCode })
+        axios.post('/register', { username: usernameInput, secretCode })
             .then((response) => {
                 setUsername(usernameInput);
                 setAuthenticated(true);

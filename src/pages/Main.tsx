@@ -12,7 +12,7 @@ const Main = () => {
     const {addMessage} = useMessages();
 
     useEffect(() => {
-        const ws = new WebSocket(`ws://localhost:3000/?username=${username}`);
+        const ws = new WebSocket(`wss://${window.location.host}/?username=${username}`);
 
         ws.onopen = () => {
             console.log('WebSocket connected');
